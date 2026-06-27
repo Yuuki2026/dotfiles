@@ -1,0 +1,13 @@
+# SSH 私钥
+home/.ssh/id_*
+home/.ssh/*.pem
+home/.ssh/ThinkCentre-M73*
+!home/.ssh/config
+
+# 历史记录
+home/.bash_history
+home/.zsh_history
+
+# 临时文件
+*.swp
+*.tmp
