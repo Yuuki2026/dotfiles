@@ -11,18 +11,23 @@
         "hyprland/window"
     ],
 
+
     "modules-right": [
-        "cpu",
-        "memory",
-        "clock"
+    "custom/input",
+    "tray",
+    "network",
+    "pulseaudio",
+    "clock"
     ],
+
 
     "custom/arch": {
         "format": ""
     },
 
     "clock": {
-        "format": "{:%Y-%m-%d %H:%M}"
+    "format": "󰃰 {:%H:%M}",
+    "tooltip-format": "{:%Y-%m-%d %A}"
     },
 
     "cpu": {
@@ -31,5 +36,36 @@
 
     "memory": {
         "format": "MEM {}%"
+    } ,
+
+    "network": {
+    "format-wifi": "󰤨",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤭",
+    "tooltip-format": "{essid}\n{ipaddr}"
+    },
+
+    "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰖁",
+    "format-icons": {
+        "default": [
+            "󰕿",
+            "󰖀",
+            "󰕾"
+        ]
+    },
+    "on-click": "pavucontrol"
+},
+
+    "tray": {
+    "icon-size": 16,
+    "spacing": 10
+    },
+
+    "custom/input": {
+    "exec": "~/.config/waybar/scripts/input-method.sh",
+    "return-type": "json",
+    "interval": 1
     }
 }

@@ -5,32 +5,83 @@
 }
 
 window#waybar {
-    background: #111111;
-    color: #ffffff;
-    border-bottom: 1px solid #2a2a2a;
+    background: transparent;
+    color: #ECEFF4;
 }
 
+/* 三个区域 */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(25, 25, 25, 0.88);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 0 10px;
+    margin: 6px 8px;
+}
+
+/* Arch Logo */
 #custom-arch {
     color: #1793D1;
-    padding: 0 12px;
     font-size: 18px;
+    padding: 0 10px;
+}
+
+/* 工作区 */
+#workspaces {
+    margin: 0 4px;
 }
 
 #workspaces button {
-    color: #777777;
-    padding: 0 8px;
+    color: #7c7c7c;
+    padding: 0 6px;
+    border-radius: 8px;
 }
 
 #workspaces button.active {
-    color: #1793D1;
+    color: #ffffff;
+    background: #1793D1;
 }
 
+#workspaces button:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* 当前窗口 */
 #window {
-    color: #cccccc;
+    color: #D8DEE9;
+    padding: 0 12px;
 }
 
-#clock,
-#cpu,
-#memory {
-    padding: 0 12px;
+/* 右侧模块统一 */
+#custom-input,
+#tray,
+#network,
+#pulseaudio,
+#clock {
+    padding: 0 8px;
+}
+
+/* 输入法 */
+#custom-input.cn {
+    color: #88C0D0;
+}
+
+#custom-input.en {
+    color: #A3A3A3;
+}
+
+/* 网络 */
+#network {
+    color: #8FBCBB;
+}
+
+/* 音量 */
+#pulseaudio {
+    color: #EBCB8B;
+}
+
+/* 时间 */
+#clock {
+    color: #D8DEE9;
 }
